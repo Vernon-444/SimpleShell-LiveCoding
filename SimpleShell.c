@@ -34,7 +34,7 @@ int main(void)
 int findCmd(int status, char *buffer)
 {
 	char *arr[MAX_ARGS], *tok;
-	int i = 0, j = 0;
+	int i = 0;
 	char delim[] = {' ', '\n'};
 
 	tok = strtok(buffer, delim);
