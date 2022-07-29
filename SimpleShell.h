@@ -24,6 +24,8 @@ typedef struct builtin_struct
 } builtin;
 
 int findCmd(int status, char *buffer);
+char *searchCmd(char *filename);
+char *findPath();
 int executeCommand(char **cmd, int status);
 /*builtins*/
 int checkBuiltins(int status, char **arr, char *buffer);
