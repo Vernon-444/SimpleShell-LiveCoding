@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"*.py": "python",
+		"*.c": "c",
+		"*.sh": "shellscript",
+		"*.js": "javascript",
+		"*.c ": "c",
+		"types.h": "c"
+	}
+}
