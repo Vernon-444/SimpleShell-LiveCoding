@@ -15,7 +15,19 @@
 #define PROMPT "SimpleShell: "
 #define MAX_ARGS 32
 
+extern char **environ;
+
+typedef struct builtin_struct
+{
+	char *cmd;
+	int (*func)(int status);
+} builtin;
+
 int findCmd(int status, char *buffer);
-int execute_command(char **cmd, int status);
+int executeCommand(char **cmd, int status);
+/*builtins*/
+int checkBuiltins(int status, char **arr, char *buffer);
+void exitShell(char **arr, char *buffer, int status);
+int printEnv(int status);
 
 #endif

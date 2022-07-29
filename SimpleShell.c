@@ -39,7 +39,8 @@ int findCmd(int status, char *buffer)
 		tok = strtok(NULL, delim);
 	}
 	arr[i] = NULL;
-	executeCommand(arr, status);
+	if (!checkBuiltins(status, arr, buffer))
+		executeCommand(arr, status);
 	return (status);
 }
 int executeCommand(char **cmd, int status)
