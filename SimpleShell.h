@@ -29,5 +29,6 @@ int executeCommand(char **cmd, int status);
 int checkBuiltins(int status, char **arr, char *buffer);
 void exitShell(char **arr, char *buffer, int status);
 int printEnv(int status);
+int clearTerm(int status);
 
 #endif

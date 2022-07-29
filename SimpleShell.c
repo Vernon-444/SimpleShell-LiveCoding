@@ -6,6 +6,11 @@ int main(void)
 	char *buffer = NULL;
 	size_t bytes = 0;
 
+	if (isatty(STDIN_FILENO))
+	{
+		printf("Welcome to my Shell!\n");
+		printf("Please follow each command with the enter key.\n");
+	}
 	/*Infinate Loop*/
 	while(1)
 	{
